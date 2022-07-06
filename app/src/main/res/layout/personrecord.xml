@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    app:cardBackgroundColor="#ECE6E6"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/infoNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama : " />
+
+        <TextView
+            android:id="@+id/namanya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/infoNama"
+            android:text="Nama orang" />
+
+        <TextView
+            android:id="@+id/infoUmur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoNama"
+            android:text="Umur : " />
+
+        <TextView
+            android:id="@+id/umurnya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namanya"
+            android:layout_toRightOf="@id/infoUmur"
+            android:text="Umurnya" />
+
+        <TextView
+            android:id="@+id/infoPenghasilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoUmur"
+            android:text="Penghasilan : " />
+
+        <TextView
+            android:id="@+id/penghasilannya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/umurnya"
+            android:layout_toRightOf="@id/infoPenghasilan"
+            android:text="Penghasilannya" />
+
+        <TextView
+            android:id="@+id/infoNik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoPenghasilan"
+            android:text="Nomor Induk Kewarganegaraan : " />
+
+        <TextView
+            android:id="@+id/niknya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/penghasilannya"
+            android:layout_toRightOf="@id/infoNik"
+            android:text="NIKnya" />
+
+        <TextView
+            android:id="@+id/infoNip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoNik"
+            android:text="NIP : " />
+
+        <TextView
+            android:id="@+id/nipnya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoNik"
+            android:layout_toRightOf="@id/infoNip"
+            android:text="NIPnya" />
+
+        <TextView
+            android:id="@+id/infoJurusan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoNip"
+             />
+
+        <TextView
+            android:id="@+id/jurusannya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nipnya"
+            android:layout_toRightOf="@id/infoJurusan" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama: "/>
+        <EditText
+            android:id="@+id/editTxtNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama orang"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:id="@+id/txtUmur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Umur: "/>
+        <EditText
+            android:id="@+id/editTxtUmur"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Umur orang"/>
+
+        <TextView
+            android:id="@+id/txtPenghasilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penghasilan: "/>
+        <EditText
+            android:id="@+id/editTxtPenghasilan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Penghasilan orang"/>
+
+        <TextView
+            android:id="@+id/txtNik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Induk Kependudukan: "/>
+        <EditText
+            android:id="@+id/editTxtNik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="NIK"/>
+
+        <TextView
+            android:id="@+id/txtNip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Induk Mahasiswa/ Nomor Induk Pegawai : "/>
+        <EditText
+            android:id="@+id/editTxtNip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="NIM/NIP"/>
+
+        <TextView
+            android:id="@+id/txtJurusan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jurusan: "/>
+        <EditText
+            android:id="@+id/editTxtJurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Jurusan mahasiswa (Jika mahasiswa)"/>
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dataOrang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
