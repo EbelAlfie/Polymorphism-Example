@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class AdapterOrang extends RecyclerView.Adapter<AdapterOrang.OrangViewHolder> {
     Context cont ;
-    ArrayList<Mahasiswa> rangOrang ;
+    ArrayList<DataOrang> rangOrang ;
 
-    public AdapterOrang(Context cont, ArrayList<Mahasiswa> rangOrang) {
+    public AdapterOrang(Context cont, ArrayList<DataOrang> rangOrang) {
         this.cont = cont;
         this.rangOrang = rangOrang;
     }
@@ -30,7 +30,7 @@ public class AdapterOrang extends RecyclerView.Adapter<AdapterOrang.OrangViewHol
 
     @Override
     public void onBindViewHolder(@NonNull OrangViewHolder holder, int position) {
-        Mahasiswa orang = rangOrang.get(position) ;
+        DataOrang orang = rangOrang.get(position) ;
         orang.display(holder);
     }
 

@@ -13,8 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Mahasiswa orang ;
-    private ArrayList<Mahasiswa> orangOrang ;
+    private DataOrang orang ;
+    private ArrayList<DataOrang> orangOrang ;
     private RecyclerView recyclerView ;
     private AdapterOrang adapterOrang ;
     private EditText nama, umur, penghasilan, nik, nip, jurusan ;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         jurusan = (EditText) findViewById(R.id.editTxtJurusan);
         add = (Button) findViewById(R.id.btnAdd) ;
 
-        orangOrang = new ArrayList<Mahasiswa>() ;
+        orangOrang = new ArrayList<>() ;
         adapterOrang = new AdapterOrang(getApplicationContext(), orangOrang) ;
 
         recyclerView.setAdapter(adapterOrang);
@@ -79,10 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              return ;
         }
         String major = String.valueOf(jurusan.getText()) ;
-        if(major.equals("")){
-            major = "-" ;
+        if(major.equals("")){ //Polymorphism, objek orang bisa punya bentuk kelas Mahasiswa atau DataOrang
+            orang = new DataOrang(name, Integer.parseInt(age), salary, nomorIndukPenduduk, nomorIndukMahasiswa) ;
+        }else{
+            orang = new Mahasiswa(name, Integer.parseInt(age), salary, nomorIndukPenduduk, nomorIndukMahasiswa, major) ;
         }
-        orang = new Mahasiswa(name, Integer.parseInt(age), salary, nomorIndukPenduduk, nomorIndukMahasiswa, major) ;
         orangOrang.add(orang) ;
         adapterOrang.notifyDataSetChanged();
     }
